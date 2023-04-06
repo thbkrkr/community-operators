@@ -6,7 +6,7 @@ metadata:
     categories: Database
     certified: 'false'
     containerImage: docker.elastic.co/eck/eck-operator:2.7.0
-    createdAt: 2023-03-31 14:32:53
+    createdAt: 2023-04-06 18:47:55
     description: Run Elasticsearch, Kibana, APM Server, Beats, Enterprise Search, Elastic Agent and Elastic Maps Server on Kubernetes and OpenShift
     repository: https://github.com/elastic/cloud-on-k8s
     support: elastic.co
@@ -19,7 +19,7 @@ metadata:
                   "name": "elasticsearch-sample"
               },
               "spec": {
-                  "version": "8.7.0",
+                  "version": "8.8.0-SNAPSHOT",
                   "nodeSets": [
                       {
                           "name": "default",
@@ -64,7 +64,7 @@ metadata:
                   "name": "kibana-sample"
               },
               "spec": {
-                  "version": "8.7.0",
+                  "version": "8.8.0-SNAPSHOT",
                   "count": 1,
                   "elasticsearchRef": {
                       "name": "elasticsearch-sample"
@@ -102,7 +102,7 @@ metadata:
                   "name": "apmserver-sample"
               },
               "spec": {
-                  "version": "8.7.0",
+                  "version": "8.8.0-SNAPSHOT",
                   "count": 1,
                   "elasticsearchRef": {
                       "name": "elasticsearch-sample"
@@ -116,7 +116,7 @@ metadata:
                   "name": "ent-sample"
               },
               "spec": {
-                  "version": "8.7.0",
+                  "version": "8.8.0-SNAPSHOT",
                   "config": {
                       "ent_search.external_url": "https://localhost:3002"
                   },
@@ -134,7 +134,7 @@ metadata:
             },
             "spec": {
               "type": "heartbeat",
-              "version": "8.7.0",
+              "version": "8.8.0-SNAPSHOT",
               "elasticsearchRef": {
                 "name": "elasticsearch-sample"
               },
@@ -168,7 +168,7 @@ metadata:
               "name": "agent-sample"
             },
             "spec": {
-              "version": "8.7.0",
+              "version": "8.8.0-SNAPSHOT",
               "elasticsearchRefs": [
                 {
                   "name": "elasticsearch-sample"
@@ -220,7 +220,7 @@ metadata:
                   "name": "ems-sample"
               },
               "spec": {
-                  "version": "8.7.0",
+                  "version": "8.8.0-SNAPSHOT",
                   "count": 1,
                   "elasticsearchRef": {
                       "name": "elasticsearch-sample"
@@ -637,7 +637,7 @@ spec:
   minKubeVersion: 1.21.0
   provider:
     name: Elastic
-  replaces: elastic-cloud-eck.v2.6.2
+  replaces: elastic-cloud-eck.v2.7.0
   version: 2.7.0
   webhookdefinitions:
     - admissionReviewVersions:
